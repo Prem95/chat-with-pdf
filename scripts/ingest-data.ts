@@ -17,7 +17,7 @@ export const run = async () => {
     /*load raw docs from the all files in the directory */
     const directoryLoader = new DirectoryLoader(filePath, {
       // you may need to add `.then(m => m.default)` to the end of the import
-      '.pdf': (path) => new CustomPDFLoader(path, '/pdf'),
+      '.pdf': (path) => new CustomPDFLoader(path),
     });
     // const loader = new PDFLoader(filePath);
     const rawDocs = await directoryLoader.load();
